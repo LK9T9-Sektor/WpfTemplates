@@ -1,0 +1,30 @@
+﻿<Window x:Class="WpfTemplates.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTemplates"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel>
+            <Button Content="GroupBoxCollection" Click="GroupBoxCollection_Click"></Button>
+            <Button Content="ListOfBtnsWithContent" Click="ListOfBtnsWithContent_Click"></Button>
+            <Button Content="SingleItemSelectFromList" Click="SingleItemSelectFromList_Click"></Button>
+            <Button Content="VerticalList" Click="VerticalList_Click"></Button>
+            <Button Content="VerticalScrollWithContent" Click="VerticalScrollWithContent_Click"></Button>
+        </StackPanel>
+
+        <Border Grid.Column="1" BorderThickness="3" BorderBrush="Green">
+
+        </Border>
+
+    </Grid>
+    
+</Window>

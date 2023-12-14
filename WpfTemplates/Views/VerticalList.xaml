@@ -1,0 +1,52 @@
+﻿<Window x:Class="WpfTemplates.Views.VerticalList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTemplates.Views"
+        mc:Ignorable="d"
+        Title="VerticalList" Height="450" Width="800">
+    
+    <Grid Margin="5">
+
+        <ScrollViewer
+            VerticalScrollBarVisibility="Disabled"
+            HorizontalScrollBarVisibility="Auto">
+
+            <ItemsControl
+                x:Name="SearchResultList"                
+                ItemsSource="{Binding Titles}">
+
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel Orientation="Vertical"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border
+                            Margin="5"
+                            BorderThickness="1"
+                            BorderBrush="Aqua">
+
+                            <TextBlock
+                                Text="{Binding Title}"
+                                HorizontalAlignment="Center"                               
+                                VerticalAlignment="Top"
+                                FontSize="12"
+                                TextWrapping="Wrap"
+                                TextAlignment="Center"
+                                FontWeight="DemiBold"  
+                                Width="150"
+                                Height="150" />
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+
+            </ItemsControl>
+        </ScrollViewer>
+
+    </Grid>
+    
+</Window>
