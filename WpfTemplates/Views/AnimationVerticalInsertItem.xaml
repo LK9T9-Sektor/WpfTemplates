@@ -1,0 +1,60 @@
+﻿<Window x:Class="WpfTemplates.Views.AnimationVerticalInsertItem"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfTemplates.Views"
+        mc:Ignorable="d"
+        Title="AnimationVerticalInsertItem" Height="450" Width="800">
+
+    <Window.Resources>
+        <Storyboard x:Key="Anim">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Info" 
+                        Storyboard.TargetProperty="Width">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="100" />
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+
+    <StackPanel>
+
+        <ItemsControl ItemsSource="{Binding ItemsList}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    
+                    <DataTemplate.Resources>
+                        <Storyboard x:Key="Anim">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Outer" 
+                                           Storyboard.TargetProperty="Width">
+                                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="50" />
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                        
+                    </DataTemplate.Resources>
+                    
+                    <DataTemplate.Triggers>
+                        <EventTrigger RoutedEvent="Loaded">
+                            <BeginStoryboard Storyboard="{StaticResource Anim}" />
+                        </EventTrigger>
+                    </DataTemplate.Triggers>
+
+                    <StackPanel x:Name="Outer" Margin="5">
+                        <StackPanel x:Name="Info" 
+                                    Orientation="Vertical" 
+                                    HorizontalAlignment="Right" 
+                                    Width="50">
+                            <TextBlock Text="{Binding Title}"/>
+                            <TextBlock Text="{Binding Text}"/>
+                            <TextBlock Text="{Binding Date}"/>
+                        </StackPanel>
+                    </StackPanel>
+                    
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
+    </StackPanel>
+
+</Window>

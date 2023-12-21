@@ -25,6 +25,7 @@
             <Button Content="VerticalList" Click="VerticalList_Click"></Button>
             <Button Content="VerticalScrollWithContent" Click="VerticalScrollWithContent_Click"></Button>
             <Button Content="RevertedItemsControl" Click="RevertedItemsControl_Click"></Button>
+            <Button Content="AnimationVerticalInsertItem" Click="AnimationVerticalInsertItem_Click"></Button>
             <Button Content="AnimationInsertItem" Click="AnimationInsertItem_Click"></Button>
         </StackPanel>
 
