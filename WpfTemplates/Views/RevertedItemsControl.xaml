@@ -20,7 +20,7 @@
                         <ItemsPanelTemplate>
                             <StackPanel Orientation="Vertical"
                                         HorizontalAlignment="Center"
-                                        VerticalAlignment="Bottom">
+                                        VerticalAlignment="Top">
                             </StackPanel>
                         </ItemsPanelTemplate>
                     </ItemsControl.ItemsPanel>
@@ -28,16 +28,20 @@
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
                             <Border BorderBrush="DarkGreen" BorderThickness="2" CornerRadius="3" Margin="2">
-                                <controls:ReversibleStackPanel Orientation="Vertical" VerticalAlignment="Bottom">
+                                <controls:ReversibleStackPanel Orientation="Vertical" VerticalAlignment="Top">
                                     <TextBlock HorizontalAlignment="Center"
-                                                                           Margin="5" 
-                                                                           FontSize="14"
-                                                                           FontWeight="Bold" 
-                                                                           Text="{Binding Title}"/>
+                                               Margin="5" 
+                                               FontSize="14"
+                                               FontWeight="Bold" 
+                                               Text="{Binding Title}"/>
                                     <TextBlock HorizontalAlignment="Center"
-                                                                           Margin="5" 
-                                                                           FontSize="12" 
-                                                                           Text="{Binding Text}"/>
+                                               Margin="5" 
+                                               FontSize="12" 
+                                               Text="{Binding Text}"/>
+                                    <TextBlock HorizontalAlignment="Center"
+                                            Margin="5" 
+                                            FontSize="12" 
+                                            Text="{Binding Date}"/>
                                 </controls:ReversibleStackPanel>
                             </Border>
                         </DataTemplate>
