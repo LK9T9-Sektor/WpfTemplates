@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using WpfTemplates.Models;
 
 namespace WpfTemplates.Views;
 
@@ -11,32 +12,20 @@ public partial class VerticalList : Window
     }
 }
 
-public class Item
-{
-    public Item(string title, string title2)
-    {
-        Title = title;
-        Title2 = title2;
-    }
-
-    public string Title { get; set; }
-    public string Title2 { get; set; }
-}
-
 public class MainWindowViewModel
 {
     public MainWindowViewModel()
     {
         Titles = new List<Item>()
-         {
-            new Item("Slide #1", "Title2 #1"),
-            new Item("Slide #2", "Title2 #2"),
-            new Item("Slide #3", "Title2 #3"),
-            new Item("Slide #4", "Title2 #4"),
-            new Item("Slide #5", "Title2 #5"),
-            new Item("Slide #6", "Title2 #6"),
-            new Item("Slide #7", "Title2 #7"),
-            new Item("Slide #8", "Title2 #8"),
+        {
+            new Item("Title #1", "Text #1"),
+            new Item("Title #2", "Text #2"),
+            new Item("Title #3", "Text #3"),
+            new Item("Title #4", "Text #4"),
+            new Item("Title #5", "Text #5"),
+            new Item("Title #6", "Text #6"),
+            new Item("Title #7", "Text #7"),
+            new Item("Title #8", "Text #8"),
          };
     }
 

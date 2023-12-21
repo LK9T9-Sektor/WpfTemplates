@@ -40,4 +40,16 @@ public partial class MainWindow : Window
         window.Show();
     }
 
+    private void RevertedItemsControl_Click(object sender, RoutedEventArgs e)
+    {
+        var window = new RevertedItemsControl();
+        window.Show();
+    }
+
+    private void AnimationInsertItem_Click(object sender, RoutedEventArgs e)
+    {
+        var window = new AnimationInsertItem();
+        window.Show();
+    }
+
 }

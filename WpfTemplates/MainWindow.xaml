@@ -24,6 +24,8 @@
             <Button Content="SingleItemSelectFromList" Click="SingleItemSelectFromList_Click"></Button>
             <Button Content="VerticalList" Click="VerticalList_Click"></Button>
             <Button Content="VerticalScrollWithContent" Click="VerticalScrollWithContent_Click"></Button>
+            <Button Content="RevertedItemsControl" Click="RevertedItemsControl_Click"></Button>
+            <Button Content="AnimationInsertItem" Click="AnimationInsertItem_Click"></Button>
         </StackPanel>
 
         <Border Grid.Column="1" BorderThickness="3" BorderBrush="Green">

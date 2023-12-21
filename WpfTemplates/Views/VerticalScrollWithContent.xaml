@@ -25,7 +25,7 @@
 
                             <Label HorizontalAlignment="Center" Content="{Binding Title}" Grid.Row="1" Margin="2"/>
 
-                            <Label HorizontalAlignment="Center" Content="{Binding Title2}" Grid.Row="2" Margin="2"/>
+                            <Label HorizontalAlignment="Center" Content="{Binding Text}" Grid.Row="2" Margin="2"/>
 
                             <Button HorizontalAlignment="Center" Content="Button1" Width="80" Height="80"
                                     Grid.Row="0"  Margin="2"/>
