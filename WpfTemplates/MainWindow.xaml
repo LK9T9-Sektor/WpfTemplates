@@ -27,6 +27,7 @@
             <Button Content="RevertedItemsControl" Click="RevertedItemsControl_Click"></Button>
             <Button Content="AnimationVerticalInsertItem" Click="AnimationVerticalInsertItem_Click"></Button>
             <Button Content="AnimationInsertItem" Click="AnimationInsertItem_Click"></Button>
+            <Button Content="MessageBoxShowOnValueUpdate" Click="MessageBoxShowOnValueUpdate_Click"></Button>
         </StackPanel>
 
         <Border Grid.Column="1" BorderThickness="3" BorderBrush="Green">

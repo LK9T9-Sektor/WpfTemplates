@@ -18,17 +18,17 @@
 
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
-                            <StackPanel Orientation="Vertical"
-                                        HorizontalAlignment="Center"
-                                        VerticalAlignment="Top">
-                            </StackPanel>
+                            <WrapPanel Orientation="Vertical"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Bottom">
+                            </WrapPanel>
                         </ItemsPanelTemplate>
                     </ItemsControl.ItemsPanel>
 
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
                             <Border BorderBrush="DarkGreen" BorderThickness="2" CornerRadius="3" Margin="2">
-                                <controls:ReversibleStackPanel Orientation="Vertical" VerticalAlignment="Top">
+                                <controls:ReversibleStackPanel ReverseOrder="False">
                                     <TextBlock HorizontalAlignment="Center"
                                                Margin="5" 
                                                FontSize="14"

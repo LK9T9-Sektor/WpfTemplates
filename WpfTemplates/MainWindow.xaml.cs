@@ -58,4 +58,10 @@ public partial class MainWindow : Window
         window.Show();
     }
 
+    private void MessageBoxShowOnValueUpdate_Click(object sender, RoutedEventArgs e)
+    {
+        var window = new MessageBoxShowOnValueUpdate();
+        window.Show();
+    }
+
 }

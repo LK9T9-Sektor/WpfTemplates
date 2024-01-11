@@ -26,6 +26,7 @@ public partial class RevertedItemsControl : Window
         Dispatcher.BeginInvoke(delegate ()
         {
             ItemsList.Add(new(text, DateTime.Now.ToString()));
+            //ItemsList.Insert(0, new(text, DateTime.Now.ToString()));
         });
     }
 

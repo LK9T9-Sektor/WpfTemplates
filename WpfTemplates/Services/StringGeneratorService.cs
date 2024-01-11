@@ -5,7 +5,6 @@ namespace WpfTemplates.Services;
 public class StringGeneratorService
 {
     private readonly Action<string> _onCreated;
-    private bool _started = false;
     private readonly double _timerInterval = 5;
     private Timer? _timer = null;
 
@@ -16,12 +15,16 @@ public class StringGeneratorService
 
     public void Start()
     {
-        if (_started == false)
+        if (_timer == null)
         {
             _timer = new Timer(Callback, null, TimeSpan.Zero,
                 TimeSpan.FromSeconds(_timerInterval));
-            _started = true;
         }
+    }
+
+    public void Stop()
+    {
+        _timer?.Dispose();
     }
 
     private void Callback(object? state)
