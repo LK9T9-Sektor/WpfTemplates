@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using WpfTemplates.MVVMExamples;
 using WpfTemplates.Views;
 
 namespace WpfTemplates;
@@ -63,5 +64,12 @@ public partial class MainWindow : Window
         var window = new MessageBoxShowOnValueUpdate();
         window.Show();
     }
+
+    private void BindingsToViewModel_Click(object sender, RoutedEventArgs e)
+    {
+        var window = new BindingsToViewModel();
+        window.Show();
+    }
+        
 
 }
