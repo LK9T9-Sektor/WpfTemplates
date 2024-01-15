@@ -1,21 +1,19 @@
 ﻿using System.Collections.ObjectModel;
 using System.Windows;
-using WpfTemplates.Models;
-using WpfTemplates.Services;
+using WpfTemplates.Shared.Models;
+using WpfTemplates.Shared.Services;
 
 namespace WpfTemplates.Views;
 
-public partial class RevertedItemsControl : Window
+public partial class AnimationVerticalInsertItem : Window
 {
     private readonly StringGeneratorService _stringGeneratorService;
     public ObservableCollection<Item> ItemsList { get; set; } = [];
 
-    public RevertedItemsControl()
+    public AnimationVerticalInsertItem()
     {
         InitializeComponent();
         DataContext = this;
-
-        ItemsList.Add(new("1", "2"));
 
         _stringGeneratorService = new(Add);
         _stringGeneratorService.Start();
@@ -26,7 +24,6 @@ public partial class RevertedItemsControl : Window
         Dispatcher.BeginInvoke(delegate ()
         {
             ItemsList.Add(new(text, DateTime.Now.ToString()));
-            //ItemsList.Insert(0, new(text, DateTime.Now.ToString()));
         });
     }
 

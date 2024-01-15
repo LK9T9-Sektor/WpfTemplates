@@ -1,6 +1,6 @@
-﻿using WpfTemplates.Helpers;
+﻿using WpfTemplates.Shared.Helpers;
 
-namespace WpfTemplates.Services;
+namespace WpfTemplates.Shared.Services;
 
 public class StringGeneratorService
 {

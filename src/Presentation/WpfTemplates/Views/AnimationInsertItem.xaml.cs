@@ -1,19 +1,21 @@
 ﻿using System.Collections.ObjectModel;
 using System.Windows;
-using WpfTemplates.Models;
-using WpfTemplates.Services;
+using WpfTemplates.Shared.Models;
+using WpfTemplates.Shared.Services;
 
 namespace WpfTemplates.Views;
 
-public partial class AnimationVerticalInsertItem : Window
+public partial class AnimationInsertItem : Window
 {
     private readonly StringGeneratorService _stringGeneratorService;
     public ObservableCollection<Item> ItemsList { get; set; } = [];
 
-    public AnimationVerticalInsertItem()
+    public AnimationInsertItem()
     {
         InitializeComponent();
         DataContext = this;
+
+        ItemsList.Add(new("1", "2"));
 
         _stringGeneratorService = new(Add);
         _stringGeneratorService.Start();

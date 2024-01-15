@@ -1,4 +1,4 @@
-﻿namespace WpfTemplates.Models;
+﻿namespace WpfTemplates.Shared.Models;
 
 public class Item
 {

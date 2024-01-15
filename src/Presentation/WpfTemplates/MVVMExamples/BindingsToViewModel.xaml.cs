@@ -1,5 +1,4 @@
 ﻿using System.Windows;
-using WpfTemplates.Models;
 using WpfTemplates.ViewModels;
 
 namespace WpfTemplates.MVVMExamples;

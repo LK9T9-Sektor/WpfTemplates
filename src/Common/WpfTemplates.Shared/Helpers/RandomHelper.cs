@@ -1,4 +1,4 @@
-﻿namespace WpfTemplates.Helpers;
+﻿namespace WpfTemplates.Shared.Helpers;
 
 public static class RandomHelper
 {

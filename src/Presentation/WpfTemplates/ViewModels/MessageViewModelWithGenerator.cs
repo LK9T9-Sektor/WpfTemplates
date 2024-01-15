@@ -1,6 +1,6 @@
 ﻿using System.Windows.Input;
-using WpfTemplates.Commands;
-using WpfTemplates.Services;
+using WpfTemplates.Shared.Commands;
+using WpfTemplates.Shared.Services;
 
 namespace WpfTemplates.ViewModels;
 

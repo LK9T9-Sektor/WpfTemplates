@@ -1,5 +1,5 @@
 ﻿using System.Windows;
-using WpfTemplates.Models;
+using WpfTemplates.Shared.Models;
 
 namespace WpfTemplates.Views;
 

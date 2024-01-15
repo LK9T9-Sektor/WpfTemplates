@@ -3,7 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34321.82
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfTemplates", "WpfTemplates\WpfTemplates.csproj", "{ADC96106-5282-4EBD-B97B-2E3CFF647A2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfTemplates", "src\Presentation\WpfTemplates\WpfTemplates.csproj", "{ADC96106-5282-4EBD-B97B-2E3CFF647A2F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{7A4E6C37-D2AD-40DD-A3A1-7521E3DCFA91}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfTemplates.xUnit", "tests\WpfTemplates.xUnit\WpfTemplates.xUnit.csproj", "{AA363542-CAE8-451D-A7BE-37A59A19744F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{7AD4881C-9D38-4DAB-BBD0-9AAC4FD7F2C0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfTemplates.Shared", "src\Common\WpfTemplates.Shared\WpfTemplates.Shared.csproj", "{671B98AD-BAC8-4CE8-AF55-AF34AE9AF267}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{AB5DB4FF-FAEF-4C94-AFA8-347A831340F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +25,22 @@ Global
 		{ADC96106-5282-4EBD-B97B-2E3CFF647A2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADC96106-5282-4EBD-B97B-2E3CFF647A2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADC96106-5282-4EBD-B97B-2E3CFF647A2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA363542-CAE8-451D-A7BE-37A59A19744F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA363542-CAE8-451D-A7BE-37A59A19744F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA363542-CAE8-451D-A7BE-37A59A19744F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA363542-CAE8-451D-A7BE-37A59A19744F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{671B98AD-BAC8-4CE8-AF55-AF34AE9AF267}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{671B98AD-BAC8-4CE8-AF55-AF34AE9AF267}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{671B98AD-BAC8-4CE8-AF55-AF34AE9AF267}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{671B98AD-BAC8-4CE8-AF55-AF34AE9AF267}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ADC96106-5282-4EBD-B97B-2E3CFF647A2F} = {AB5DB4FF-FAEF-4C94-AFA8-347A831340F8}
+		{AA363542-CAE8-451D-A7BE-37A59A19744F} = {7A4E6C37-D2AD-40DD-A3A1-7521E3DCFA91}
+		{671B98AD-BAC8-4CE8-AF55-AF34AE9AF267} = {7AD4881C-9D38-4DAB-BBD0-9AAC4FD7F2C0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {11266404-9DBC-4632-94A3-441FA1F7AE94}
