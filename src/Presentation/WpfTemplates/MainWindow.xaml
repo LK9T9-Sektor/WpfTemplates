@@ -6,13 +6,64 @@
         xmlns:local="clr-namespace:WpfTemplates"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    
-    <Grid>
+
+    <Window.Resources>
+        <Style x:Key="TextBlockColorStyle_ExistsInDb" TargetType="{x:Type TextBlock}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsTrue}" Value="True">
+                    <Setter Property="Background" Value="Green" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding IsTrue}" Value="False">
+                    <Setter Property="Background" Value="Red" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+        <!--<DockPanel>
+        <DockPanel DockPanel.Dock="Left" >
+            <GroupBox Header="Оплаты" DockPanel.Dock="Bottom" >
+                <DataGrid Background="BlanchedAlmond" />
+            </GroupBox>
+            <GroupBox Header="Услуга" DockPanel.Dock="Left" >
+                <Button Background="DarkRed" Content="Верхняя кнопка" />
+            </GroupBox>
+            <GroupBox Header="Оплата" DockPanel.Dock="Right" >
+                <Button DockPanel.Dock="Right" Background="DarkGreen" Content="Правая кнопка" />
+            </GroupBox>
+        </DockPanel>
+        <DataGrid DockPanel.Dock="Right" Background="LightGreen" />
+        </DockPanel>-->
+
+    <DockPanel>
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem>
+                <TextBlock Text="Обновлено:" />
+            </StatusBarItem>
+            <StatusBarItem>
+                <TextBlock Text="{Binding UpdatedDate}" />
+            </StatusBarItem>
+        </StatusBar>
+
+        <TextBlock HorizontalAlignment="Center"
+                   DockPanel.Dock="Top"
+                   TextAlignment="Center"
+                   Margin="5" 
+                   FontSize="12" 
+                   FontWeight="Bold" 
+                   TextWrapping="Wrap"
+                   Grid.Column="1"
+                   Text="{Binding Message}"
+                   Style="{DynamicResource TextBlockColorStyle_ExistsInDb}"/>
+        
+    </DockPanel>
+
+    <!--<Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="10*" />
             <RowDefinition MinHeight="50" />
         </Grid.RowDefinitions>
-        
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -38,7 +89,7 @@
         <StackPanel Grid.Row="1"
                     HorizontalAlignment="Left"
                     Orientation="Horizontal">
-            
+
             <Button Margin="5" 
                     MinHeight="35" MinWidth="35"
                     MaxHeight="50" MaxWidth="50">
@@ -46,7 +97,7 @@
                     <Polygon Points="0,0 20,12, 0,24" Stroke="Black" Fill="Gray" />
                 </Button.Content>
             </Button>
-            
+
             <Button Margin="5" 
                     MinHeight="35" MinWidth="35"
                     MaxHeight="50" MaxWidth="50">
@@ -72,6 +123,6 @@
             </Button>
         </StackPanel>
 
-    </Grid>
-    
+    </Grid>-->
+
 </Window>

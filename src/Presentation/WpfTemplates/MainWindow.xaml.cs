@@ -1,14 +1,29 @@
 ﻿using System.Windows;
 using WpfTemplates.MVVMExamples;
+using WpfTemplates.ViewModels;
 using WpfTemplates.Views;
 
 namespace WpfTemplates;
 
 public partial class MainWindow : Window
 {
+    int _s = 2;
+
     public MainWindow()
     {
+        DataContext = new BoolViewModel();
         InitializeComponent();
+
+        new Test(this);
+    }
+
+    public void S()
+    {
+        if (_s == 5) { return; }
+
+        var d = _s;
+        _s++;
+        new Test(this);
     }
 
     private void GroupBoxCollection_Click(object sender, RoutedEventArgs e)
